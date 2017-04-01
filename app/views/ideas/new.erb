@@ -1,0 +1,19 @@
+<h1><%=@title %></h1>
+<from action="/ideas" method="post" enctype="multipart/form-data">
+  <label for="idea_name">Name:</label>
+  <br />
+  <input id="idea_name" name="idea[name]" type="text" value="<%= @idea.name %>" />
+  <br />
+
+  <label for="idea_description">Description:</label>
+  <br />
+  <textarea id="idea_description" name="idea[description]" rows="5"><%= @idea.description %></textarea>
+  <br />
+
+  <label for="idea_picture">Picture:</label>
+  <br />
+  <input type="file" id="idea_picture" name="idea[picture]" rows="5"><%= @idea.picture %>
+  <br />
+
+  <input type="submit" value="Create Idea" />
+</form>

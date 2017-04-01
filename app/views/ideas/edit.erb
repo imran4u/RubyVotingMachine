@@ -1,0 +1,21 @@
+<h1>Edit Idea</h1>
+<form action="/ideas/<%= @idea.id %>" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="_method" value="put" />
+
+  <label for="idea_name">Name:</label>
+  <br />
+  <input id="idea_description" name="idea[name]" type="text" value="<%= @idea.name %>" />
+  <br />
+
+  <label for="idea_description">Description:</label>
+  <br />
+  <textarea id="idea_description" name="idea[description]" rows="5"><%= @idea.description %></textarea>
+  <br />
+
+  <label for="idea_picture">Picture:</label>
+  <br />
+  <input type="file" id="idea_picture" name="idea[picture]" rows="5"><%= @idea.picture %>
+  <br />
+
+  <input type="submit" value="Update Idea" />
+</form>
